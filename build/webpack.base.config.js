@@ -29,12 +29,21 @@ const webpackConfig = {
     rules: [
       {
         test: /\.scss$/,
-        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         exclude: resolve('node_modules')
+      },
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
       }
     ]
   }

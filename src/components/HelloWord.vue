@@ -1,12 +1,15 @@
 <template>
   <div class="helloword">
     hello <span>vue</span>
-  </div> 
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: "HelloWorld",
+  data() {
+    return {}
+  }
 }
 </script>
 
