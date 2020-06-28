@@ -1,6 +1,6 @@
 <template>
   <div class="helloword">
-    hello vue
+    hello <span>vue</span>
   </div> 
 </template>
 
@@ -10,6 +10,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.helloword {
+  background: red;
+  span {
+    color: #fff;
+  }
+}
 </style>

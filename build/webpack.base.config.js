@@ -1,8 +1,6 @@
-const path = require('path')
-// const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const { resolve } = require('./../config/utils')
+const { resolve } = require('../config/utils')
 
 const webpackConfig = {
   mode: 'development',
@@ -30,15 +28,13 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'css-loader'
-        ]
+        test: /\.scss$/,
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude: path.resolve(__dirname, 'node_modules')
+        exclude: resolve('node_modules')
       }
     ]
   }
