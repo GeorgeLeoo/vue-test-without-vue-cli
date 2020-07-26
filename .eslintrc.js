@@ -15,10 +15,19 @@ module.exports = {
     var1: true,
     var2: false
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          [ '@', './src' ]
+        ]
+      }
+    }
+  },
   rules: {
     'indent': ['error', 2],
     'quotes': ['error', 'single'],
-    'no-console': 'error',
+    // 'no-console': 'error',
     'arrow-parents': 0
   }
 };

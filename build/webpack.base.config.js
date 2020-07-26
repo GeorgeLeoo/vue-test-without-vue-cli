@@ -25,6 +25,11 @@ const webpackConfig = {
     }),
     new VueLoaderPlugin()
   ],
+  resolve: {
+    alias: {
+      '@': resolve('src')
+    }
+  },
   module: {
     rules: [
       {
